@@ -1,9 +1,13 @@
 import { UniqueIdService } from './unique-id.service';
 
-const service = new UniqueIdService();
 
-describe('UniqueIdService', () => {   
 
+describe('UniqueIdService', () => { 
+    
+    let service: UniqueIdService = null
+    beforeEach(() => {
+        const service = new UniqueIdService();
+    })
     it(`#${UniqueIdService.prototype.generateUniqueIdWithPrefix.name} should generate id when called with prefix`, () => {
         const id = service.generateUniqueIdWithPrefix('app');
         expect(id.startsWith('app -')).toBeTrue();
@@ -25,6 +29,3 @@ describe('UniqueIdService', () => {
     });
 })
 
-/*foi colocado o const service uma unica vez, e retirei de todos os ITs,
-esse teste deu um problema, pois os testes do Karma faz testes aleatórios e com isso ao atualizar sempre dá erro.
-*/
