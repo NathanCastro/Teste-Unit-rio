@@ -45,8 +45,9 @@ describe('UniqueIdService', () => {
 
 /*
     Nessa aula foi usado um método para ver onde ta passando o erro, usando o 
-    withContext. Por isso foi colocado o 'app' pois ele não é uma exceção e com isso deu errado no teste,
-    mostra onde está o erro, pois se tiver nesse array, 100 prorpriedades, vc não vai saber qual é.
+    withContext(dentro do método, vc coloca o contexto).
+    Por isso foi colocado o 'app' pois ele não é uma exceção e com isso deu errado no teste,
+    mostra onde está o erro, pois se tiver nesse array, 100 prorpriedades, vc não vai saber qual é o erro.
 
     Para o teste voltar a dar certo, foi retirado o 'app'
     
