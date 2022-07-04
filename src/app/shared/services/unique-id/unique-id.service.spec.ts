@@ -34,13 +34,12 @@ describe('UniqueIdService', () => {
 
     it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
         should throw when called with empty`, () => {
-        const emptyValues = [null, undefined, '']
+        const emptyValues = [null, undefined, '', '0', '2']
         emptyValues.forEach(emptyValues =>{
             expect(() => service.generateUniqueIdWithPrefix(emptyValues)).toThrow();
         });
     });
 })
 
-/*
-quando vc ta chamando um método, e vc quer testar se ele lança uma seção ou não
-vc tem q chamar esse método dentro de uma função*/
+/*se o prefixo  Null , undefined é uma string em branco
+    ou se não passou no teste*/
