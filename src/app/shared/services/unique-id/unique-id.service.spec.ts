@@ -36,15 +36,20 @@ describe('UniqueIdService', () => {
         should throw when called with empty`, () => {
         const emptyValues = [null, undefined, '', '0', '2']
         emptyValues.forEach(emptyValues =>{
-            expect(() => service.generateUniqueIdWithPrefix(emptyValues)).toThrow();
+            expect(() => service.generateUniqueIdWithPrefix(emptyValues))
+            .withContext(`Empty value: ${emptyValues}`)
+            .toThrow();
         });
-    });
+    });//teste só para exceção
 })
 
-/*se o prefixo  Null , undefined é uma string em branco
-    ou se não passou no teste.
+/*
+    Nessa aula foi usado um método para ver onde ta passando o erro, usando o 
+    withContext. Por isso foi colocado o 'app' pois ele não é uma exceção e com isso deu errado no teste,
+    mostra onde está o erro, pois se tiver nesse array, 100 prorpriedades, vc não vai saber qual é.
+
+    Para o teste voltar a dar certo, foi retirado o 'app'
     
-    Foi usado o REGEX para o teste, lembrando que o ID tem q começar com letra maiuscula ou minuscula
     
 
 */
