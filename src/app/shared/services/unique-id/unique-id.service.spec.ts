@@ -42,4 +42,9 @@ describe('UniqueIdService', () => {
 })
 
 /*se o prefixo  Null , undefined é uma string em branco
-    ou se não passou no teste*/
+    ou se não passou no teste.
+    
+    Foi usado o REGEX para o teste, lembrando que o ID tem q começar com letra maiuscula ou minuscula
+    
+
+*/
