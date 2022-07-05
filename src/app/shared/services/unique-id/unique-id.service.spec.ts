@@ -41,15 +41,20 @@ describe('UniqueIdService', () => {
             .toThrow();
         });
     });//teste só para exceção
+
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
+        should return the number of genetadedIds when called`, () => {
+        service.generateUniqueIdWithPrefix('app');
+        service.generateUniqueIdWithPrefix('app');
+
+        expect(true).toBeTrue();//testar verdadeiro ou falso
+        expect(true).toBe(true);//compara se é igual ao outro, não podendo instancia
+        expect(true).toBeTruthy();// mais genérico, aceita nova instancia, assim como primitivo(false ou true)
+    });
 })
 
 /*
-    Nessa aula foi usado um método para ver onde ta passando o erro, usando o 
-    withContext(dentro do método, vc coloca o contexto).
-    Por isso foi colocado o 'app' pois ele não é uma exceção e com isso deu errado no teste,
-    mostra onde está o erro, pois se tiver nesse array, 100 prorpriedades, vc não vai saber qual é o erro.
-
-    Para o teste voltar a dar certo, foi retirado o 'app'
+    
     
     
 
