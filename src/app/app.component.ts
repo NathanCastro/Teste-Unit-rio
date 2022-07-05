@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular testing';
+
+  public likesAppComponent = 0
+  
+  public likeAppComponentClik(): void{
+    this.likesAppComponent++;
+  }
 }

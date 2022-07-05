@@ -9,8 +9,8 @@ import { UniqueIdService } from 'src/app/shared/services/unique-id/unique-id.ser
 })
 export class LikeWidgetComponent implements OnInit {
 
-  @Output() public liked = new EventEmitter<void>();
-  @Input() public likes = 0;
+  @Output() public likedWidgetComponent = new EventEmitter<void>();
+  @Input() public likesWidgetComponent = 0;
   @Input() public id = null;
   public fonts = {faThumbsUp}
 
@@ -22,8 +22,8 @@ export class LikeWidgetComponent implements OnInit {
     }
   }
 
-  public like(): void{
-    this.liked.emit();
+  public likeWidgetComponentClik(): void{
+    this.likedWidgetComponent.emit();
   }
 
 }
