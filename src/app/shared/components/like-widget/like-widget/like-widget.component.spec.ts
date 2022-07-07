@@ -1,25 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { LikeWidgetComponent } from './like-widget.component';
 
+
+ 
 describe('LikeWidgetComponent', () => {
-  let component: LikeWidgetComponent;
-  let fixture: ComponentFixture<LikeWidgetComponent>;
+  let Component: LikeWidgetComponent= null;
 
-  beforeEach(async () => {
+  beforeEach(async  () => { //async na Totvs não se usa mais
     await TestBed.configureTestingModule({
-      declarations: [ LikeWidgetComponent ]
-    })
-    .compileComponents();
-  });
+      declarations:[LikeWidgetComponent],
+      
+    }).compileComponents();
+    
+  })
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LikeWidgetComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('', () => {
+    
   });
 });
