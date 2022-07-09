@@ -23,3 +23,10 @@ fdescribe('LikeWidgetComponent', () => {
     expect(instance).toBeTruthy();
   });
 });
+
+`Marque as opções verdadeiras a respeito da
+  criação de instâncias de componentes com TestBed:
+
+  *O método TestBed.createComponent retorna uma instância de ComponentFixture.
+  *O método TestBed.createComponent recebe como parâmetro a
+classe do componente que desejamos instanciar.`
