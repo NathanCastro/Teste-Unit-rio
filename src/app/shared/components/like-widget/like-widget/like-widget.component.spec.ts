@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { UniqueIdService } from 'src/app/shared/services/unique-id/unique-id.service';
 
 import { LikeWidgetComponent } from './like-widget.component';
+import { LikeWidgetModule } from './like-widget.module';
 
  
 fdescribe('LikeWidgetComponent', () => {
@@ -10,23 +9,32 @@ fdescribe('LikeWidgetComponent', () => {
 
   beforeEach(async  () => { //async na Totvs não se usa mais
     await TestBed.configureTestingModule({
-      declarations:[LikeWidgetComponent],
-      providers: [UniqueIdService],
-      imports:[FontAwesomeModule]
+      imports: [
+        LikeWidgetModule
+      ],
     }).compileComponents();
     
     fixture = TestBed.createComponent(LikeWidgetComponent)
   })
 
   it('should create component', () => {
-    const instance = fixture.componentInstance;
-    expect(instance).toBeTruthy();
+    const component = fixture.componentInstance;
+    expect(component).toBeTruthy();
   });
+
+  it('should auto generate ID when id input property is missing', () => {
+    const component = fixture.componentInstance;
+    fixture.detectChanges();
+    expect(component.id).toBeTruthy();
+  });
+  it('should NOT generate ID when id input propertu is present', () => {
+    const component = fixture.componentInstance;
+    const someId = 'someId';
+    component.id= someId
+    fixture.detectChanges();
+    expect(component.id).toBe(someId);
+  });
+
+
 });
 
-`Marque as opções verdadeiras a respeito da
-  criação de instâncias de componentes com TestBed:
-
-  *O método TestBed.createComponent retorna uma instância de ComponentFixture.
-  *O método TestBed.createComponent recebe como parâmetro a
-classe do componente que desejamos instanciar.`
