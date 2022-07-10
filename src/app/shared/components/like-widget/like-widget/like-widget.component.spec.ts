@@ -38,3 +38,13 @@ fdescribe('LikeWidgetComponent', () => {
 
 });
 
+`a respeito da detecção de mudanças de um componente ao executarmos nossos testes:
+  É possível tornar a detecção de mudanças automática em 
+  nossos testes, apesar da equipe do Angular não recomendá-la.
+
+  Por padrão, a detecção de mudanças de um componente não é disparada automaticamente ao executarmos
+  nossos testes. É preciso que o desenvolvedor faça essa detecção manualmente.
+
+  É através de uma fixture de um component que disparamos o mecanismo de detecção de mudanças do Angular
+  e por conseguinte o seu ciclo de vida.
+`
