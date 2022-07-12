@@ -21,11 +21,12 @@ fdescribe('LikeWidgetComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should auto generate ID when id input property is missing', () => {    
+  it('should auto-generate ID during ngOnInit when (@Input id) is not assigned', () => {    
     fixture.detectChanges();
     expect(component.id).toBeTruthy();
   });
-  it('should NOT generate ID when id input propertu is present', () => {    
+
+  it('should NOT auto-generate ID during ngOnInit when (@Input id) is not assigned', () => {    
     const someId = 'someId';
     component.id= someId
     fixture.detectChanges();
@@ -33,7 +34,7 @@ fdescribe('LikeWidgetComponent', () => {
   });
 
   it(`#${LikeWidgetComponent.prototype.likeWidgetComponentClik.name}
-    should trigger emission when called`, () => {    
+    should trigger (@output likedWidgetComponent) when called`, () => {    
     fixture.detectChanges();
     const spyEmit = spyOn(component.likedWidgetComponent, 'emit')    
     component.likeWidgetComponentClik();    
@@ -43,17 +44,7 @@ fdescribe('LikeWidgetComponent', () => {
 
   
   /*
-    it(`#${LikeWidgetComponent.prototype.like.name}
-      should trigger (@Output liked) when called`, () => {
-          fixture.detectChanges();
-          component.like();
-          expect(component.liked.emit).toHaveBeenCalled();
-      }
-    );
-    O teste falhará, pois a chamada de toHaveBeenCalled espera um spy.
-
-    Podemos corrigir o código transformando o método em um spy através
-    da chamada de spyOn(component.liked, 'emit').
+    Só mudou os títulos dos testes, nada demais
   */
   
   
