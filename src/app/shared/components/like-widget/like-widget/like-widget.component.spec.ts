@@ -35,19 +35,28 @@ fdescribe('LikeWidgetComponent', () => {
   it(`#${LikeWidgetComponent.prototype.likeWidgetComponentClik.name}
     should trigger emission when called`, () => {    
     fixture.detectChanges();
-    component.likedWidgetComponent.subscribe(()=>{
+    
+    component.likedWidgetComponent.subscribe( done =>{
       expect(true).toBeTrue();
+      done();
     });
-    component.likeWidgetComponentClik()
+    component.likeWidgetComponentClik();
   });
 
 
-  `A respeito ao teste de propriedades de output:
+  `
+  asserções assíncronas no teste de componentes:
+
+  A função it, quando recebe um parâmetro geralmente chamado done,
+  este parâmetro é uma referência para uma função que sinaliza para o teste que
+  ele terminou.
+  É importante que o desenvolvedor chame a função done no momento em que
+  achar adequado,
+  caso contrário o teste nunca terminará e um erro de timeout será disparado.
   
-  É possível realizar a inscrição de propriedades de 
-  output em nossos testes como se fossem Observables.` 
+  não entendi essa aula
+  `
 
-
-
+  
 });
 
