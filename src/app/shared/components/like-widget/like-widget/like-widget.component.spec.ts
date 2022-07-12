@@ -42,17 +42,18 @@ fdescribe('LikeWidgetComponent', () => {
 
 
   
-  /*it(`#${LikeWidgetComponent.prototype.like.name}
-    should trigger (@Output liked) when called`, () => {
-        spyOn(component.liked, 'emit');
-        fixture.detectChanges();
-        component.like();
-        expect(component.liked.emit).toHaveBeenCalled();
-    }
-  );
-  
-  O teste com toHaveBeenCalled funcionará, pois a
-  função spyOn modificou o método component.liked transformando-o em um spy.
+  /*
+    it(`#${LikeWidgetComponent.prototype.like.name}
+      should trigger (@Output liked) when called`, () => {
+          fixture.detectChanges();
+          component.like();
+          expect(component.liked.emit).toHaveBeenCalled();
+      }
+    );
+    O teste falhará, pois a chamada de toHaveBeenCalled espera um spy.
+
+    Podemos corrigir o código transformando o método em um spy através
+    da chamada de spyOn(component.liked, 'emit').
   */
   
   
