@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<testsuite name="Firefox 102.0 (Windows 10)" package="" timestamp="2022-07-13T10:44:21" id="0" hostname="Desktop_PCH001" tests="9" errors="0" failures="0" time="0.13">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"/>
+  </properties>
+  <testcase name="LikeWidgetComponent should create component" time="0.094" classname="Firefox_102_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.015" classname="Firefox_102_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent should NOT auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.01" classname="Firefox_102_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent #likeWidgetComponentClik&#xA;    should trigger (@output likedWidgetComponent) when called" time="0.011" classname="Firefox_102_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix &#xA;    should not generate duplicate IDs when called multiple time" time="0" classname="Firefox_102_0_(Windows_10).UniqueIdService">
+    <skipped/>
+  </testcase>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;        should return the number of genetadedIds when called" time="0" classname="Firefox_102_0_(Windows_10).UniqueIdService">
+    <skipped/>
+  </testcase>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;        should throw when called with empty" time="0" classname="Firefox_102_0_(Windows_10).UniqueIdService">
+    <skipped/>
+  </testcase>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix &#xA;        should generate id when called with prefix" time="0" classname="Firefox_102_0_(Windows_10).UniqueIdService">
+    <skipped/>
+  </testcase>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;        should return the number of genetadedIds when called" time="0" classname="Firefox_102_0_(Windows_10).UniqueIdService">
+    <skipped/>
+  </testcase>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

@@ -44,10 +44,10 @@ fdescribe('LikeWidgetComponent', () => {
 
   
   /*
-  Custom Launcher serve para criar launcher.
-    Você pode querer sobrescrever um launcher já existente,
-    passando parâmetros para o browser. Você pode querer fazer isso.
-    Sempre baseado no que já existe
+  Relatório para Integração Contínua serve para ver relatório dos testes
+  então foi add uma report(npm install -D karma-junit-reporter@2.0.1).
+
+  Nos arquivos criados mostra o tempo dos testes, erros e etc
   */
   
   
