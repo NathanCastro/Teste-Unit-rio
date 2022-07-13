@@ -44,10 +44,25 @@ fdescribe('LikeWidgetComponent', () => {
 
   
   /*
-  Relatório para Integração Contínua serve para ver relatório dos testes
-  então foi add uma report(npm install -D karma-junit-reporter@2.0.1).
+    Serve para saber a saúde do teste, te dar uma cobertura
+    aparece uma lista com as porcentagens dos testes.
+    Esse coverage summary, tem statements, branches, functions, lines.
 
-  Nos arquivos criados mostra o tempo dos testes, erros e etc
+    lines: lines é fácil se eu chegar aqui abrir o meu código, cadê o meu teste like widget Aqui o meu componentes,
+    like-widget.component.ts, uma linha, duas linhas, três linhas, quantidade de linhas, isso aqui é fácil,
+    matamos na hora, a quantidade de linhas que estamos testando no nosso código.
+
+    statement :et x = 10; console.log(x)
+    quantas linhas eu tenho aqui? Uma. Mas quantos statements? Duas.
+    Então isso aqui let x =10; é um statement, e isso aqui console.log(x) é outro statement.
+
+    branches:le testa se todas as estruturas decisórias do seu código foram testadas,
+    por exemplo, se você tem um if e você só passou pelo if e não caiu no else,
+    ele ia indicar para você que tem alguma
+    coisa faltando aqui porque você não caiu na árvore, na estrutura decisória.
+
+    functions: aqui isso aqui vale tanto para um nome de funções e de métodos que foram testados,
+    isso aqui te dá uma introdução para você saber a saúde do seu teste coverage,
   */
   
   
