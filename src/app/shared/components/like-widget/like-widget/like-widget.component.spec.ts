@@ -44,10 +44,13 @@ fdescribe('LikeWidgetComponent', () => {
 
   
   /*
-  foi configurado uma outra maneira de abrir o firefox junto com o chrome.
-  Quando eu rodar esse teste, eu vou rodar contra os browsers que são
-  comuns de qualquer sistema operacional,
-  no caso eu vou fazer só com Chrome e Firefox
+  Uma versão q roda em memória sem a interface gráfica, que o usuário interage
+  consome menos memória
+  Internet explore e safari não possuem versão Headless
+
+  É muito mais rápido sem a interface.
+
+  Utilizando --watch=false ele faz com que o teste rode e pare, pra não ficar no modo (watch) 
   */
   
   
