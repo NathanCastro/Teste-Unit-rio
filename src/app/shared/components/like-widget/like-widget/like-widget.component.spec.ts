@@ -44,13 +44,10 @@ fdescribe('LikeWidgetComponent', () => {
 
   
   /*
-  Foi instalado o Firefox pra rodar os testes dentro do Karma.
-    Comando "npm install -D karma-firefox-laucher@1.3.0".
-    
-  Já deve ter mais recente, mas segui o comando do professor.
-  
-    Usando 2 navegadores para fazer os testes Chrome e Firefox
-    "O firefox foi mais rápido"
+  foi configurado uma outra maneira de abrir o firefox junto com o chrome.
+  Quando eu rodar esse teste, eu vou rodar contra os browsers que são
+  comuns de qualquer sistema operacional,
+  no caso eu vou fazer só com Chrome e Firefox
   */
   
   
