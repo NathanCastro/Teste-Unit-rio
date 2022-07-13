@@ -44,13 +44,10 @@ fdescribe('LikeWidgetComponent', () => {
 
   
   /*
-  Uma versão q roda em memória sem a interface gráfica, que o usuário interage
-  consome menos memória
-  Internet explore e safari não possuem versão Headless
-
-  É muito mais rápido sem a interface.
-
-  Utilizando --watch=false ele faz com que o teste rode e pare, pra não ficar no modo (watch) 
+  Custom Launcher serve para criar launcher.
+    Você pode querer sobrescrever um launcher já existente,
+    passando parâmetros para o browser. Você pode querer fazer isso.
+    Sempre baseado no que já existe
   */
   
   
